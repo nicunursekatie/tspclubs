@@ -397,6 +397,22 @@
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
+
+            /* Avoid gray artifacts in PDF rendering */
+            .logo-circle,
+            .tagline-ribbon,
+            .info-box,
+            .points-callout,
+            .qr-block,
+            .contact-block {
+                box-shadow: none !important;
+            }
+
+            .info-box,
+            .contact-block,
+            .qr-frame {
+                background: #ffffff !important;
+            }
         }
     </style>
 </head>
