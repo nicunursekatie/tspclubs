@@ -398,7 +398,12 @@
                 print-color-adjust: exact;
             }
 
-            /* Avoid gray artifacts in PDF rendering */
+            /* Avoid gray/artifact overlays in PDF – remove all shadows and semi-transparency */
+            * {
+                box-shadow: none !important;
+                text-shadow: none !important;
+            }
+
             .logo-circle,
             .tagline-ribbon,
             .info-box,
@@ -412,6 +417,12 @@
             .contact-block,
             .qr-frame {
                 background: #ffffff !important;
+            }
+
+            /* Hide decorative low-opacity elements so they don’t render as gray blobs */
+            .bg-shape,
+            .deco-sandwich {
+                display: none !important;
             }
         }
     </style>
